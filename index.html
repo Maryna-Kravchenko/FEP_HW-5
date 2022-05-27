@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    const userAdult = confirm('Есть ли вам 18 лет?');
+    if (userAdult !== true) {
+        alert('Вам запрещено проходить опрос');
+    } else {
+        const forUserWakeUp = Number(prompt('Во сколько вы встаёте?'));
+        const userWakeUp = (isNaN(forUserWakeUp)) ? Number(prompt('Некорректный ввод')) : forUserWakeUp;
+
+        if (userWakeUp > 0 && userWakeUp <= 5) {
+            alert('Очень рано');
+        } else if (userWakeUp > 5 && userWakeUp <= 8) {
+            alert('Всё равно рано');
+        } else if (userWakeUp > 8 && userWakeUp <= 11) {
+            alert('Нормально');
+        } else if (userWakeUp > 11 && userWakeUp <= 14) {
+            alert('Слишком поздно');
+        } else if (userWakeUp > 14 && userWakeUp <= 24) {
+            alert('Очень-очень поздно');
+        } else {
+            alert('Научись пользоваться часами!');
+        }
+    }
+</script>
+</html>
