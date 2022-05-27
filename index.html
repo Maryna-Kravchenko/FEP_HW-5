@@ -14,21 +14,23 @@
     if (userAdult !== true) {
         alert('Вам запрещено проходить опрос');
     } else {
-        const forUserWakeUp = Number(prompt('Во сколько вы встаёте?'));
-        const userWakeUp = (isNaN(forUserWakeUp)) ? Number(prompt('Некорректный ввод')) : forUserWakeUp;
-
-        if (userWakeUp > 0 && userWakeUp <= 5) {
-            alert('Очень рано');
-        } else if (userWakeUp > 5 && userWakeUp <= 8) {
-            alert('Всё равно рано');
-        } else if (userWakeUp > 8 && userWakeUp <= 11) {
-            alert('Нормально');
-        } else if (userWakeUp > 11 && userWakeUp <= 14) {
-            alert('Слишком поздно');
-        } else if (userWakeUp > 14 && userWakeUp <= 24) {
-            alert('Очень-очень поздно');
+        const userWakeUp = Number(prompt('Во сколько вы встаёте?'));
+        if (isNaN(userWakeUp)) {
+            alert('Некорректный ввод');
         } else {
-            alert('Научись пользоваться часами!');
+            if (userWakeUp > 0 && userWakeUp <= 5) {
+                alert('Очень рано');
+            } else if (userWakeUp > 5 && userWakeUp <= 8) {
+                alert('Всё равно рано');
+            } else if (userWakeUp > 8 && userWakeUp <= 11) {
+                alert('Нормально');
+            } else if (userWakeUp > 11 && userWakeUp <= 14) {
+                alert('Слишком поздно');
+            } else if (userWakeUp > 14 && userWakeUp <= 24) {
+                alert('Очень-очень поздно');
+            } else {
+                alert('Научись пользоваться часами!');
+            }
         }
     }
 </script>
